@@ -1,0 +1,32 @@
+.form_div {
+    padding: 1rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.123), 0 5px 5px rgba(0, 0, 0, 0.123);
+    padding: 1.5rem;
+    color: #213547;
+    background: #e8f2f7da;
+}
+
+.form-contact {
+
+    margin: 1rem 0;
+    padding: 2rem;
+    color: #213547;
+}
+
+.input-cl {
+    width: 80%;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.btn_color {
+    background-color: #213547;
+    color: whitesmoke;
+    border-radius: 15px;
+}
+
+.btn_color:hover {
+    background: 213547;
+    color: #98d6e1;
+
+}

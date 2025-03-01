@@ -1,0 +1,81 @@
+{
+  "banner": {
+    "no_of_furnitures": 1500,
+    "no_of_customers": 1200    
+  },
+  "best_selling": [
+    {
+      "image": "https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?cs=srgb&dl=pexels-pixabay-271816.jpg&fm=jpg",
+      "title": "Elegant Shelf",
+      "price": "$799.00"
+    },
+    {
+      "image": "https://w0.peakpx.com/wallpaper/368/149/HD-wallpaper-chair-rug-plants-furniture-column-high-quality.jpg",
+      "title": "Luxury Chairs",
+      "price": "$499.00"
+    },
+    {
+      "image": "https://wallpaperboat.com/wp-content/uploads/2019/12/furniture-01.jpg",
+      "title": "King Size Bed",
+      "price": "$1299.00"
+    }
+  ],
+
+  "products": [
+    {
+      "image": "https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?cs=srgb&dl=pexels-pixabay-276583.jpg&fm=jpg",
+      "title": "Imperial Black Couch",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non debitis optio expedita earum.",
+      "price": "$799.00"
+    },
+
+    {
+      "image": "https://images2.alphacoders.com/105/1057716.jpg",
+      "title": "Classic Bed",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non debitis optio expedita earum.",
+      "price": "$799.00"
+    },
+
+    {
+      "image": "https://plus.unsplash.com/premium_photo-1661765778256-169bf5e561a6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y291Y2h8ZW58MHx8MHx8fDA%3D",
+      "title": "White Sofa",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non debitis optio expedita earum.",
+      "price": "$799.00"
+    },
+
+    {
+      "image": "https://www.modfurn.com/wp-content/uploads/2021/10/Blue_01_HD-copy-min-e1633687480858.jpg",
+      "title": "Office Chairs",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non debitis optio expedita earum.",
+      "price": " "
+    },
+
+    {
+      "image": "https://images4.alphacoders.com/260/260758.jpg",
+      "title": "Modern Chair",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non debitis optio expedita earum.",
+      "price": "$799.00"
+    },
+
+    {
+      "image": "https://t4.ftcdn.net/jpg/05/65/75/59/360_F_565755935_GLp4UQXwqgB4wYBGorgOVWm6NqU1taTE.jpg",
+      "title": "Luxury Chair",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non debitis optio expedita earum.",
+      "price": "$799.00"
+    },
+
+    {
+      "image": "https://cdn.pixabay.com/photo/2021/12/23/03/58/da-guojing-6888603_1280.jpg",
+      "title": "Wooden Chair",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non debitis optio expedita earum.",
+      "price": "$799.00"
+    },
+
+    {
+      "image": "https://img.freepik.com/free-psd/contemporary-living-room-mockup-psd-interior-design_53876-129130.jpg",
+      "title": "Sofa set",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non debitis optio expedita earum.",
+      "price": "$799.00"
+    }
+  ]
+}

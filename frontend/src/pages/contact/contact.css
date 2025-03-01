@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.containerr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  /* Background color similar to image */
+}
+
+.text-sectionn {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.text-sectionn h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.text-sectionn p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.contact-infoo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.phone {
+  font-size: 1.2rem;
+}
+
+.getintouch-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #68bc5f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.getintouch-button:hover {
+  background-color: #555;
+}
+
+.image-section {
+  flex: 1;
+
+}
+
+.design-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .text-sectionn {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+
+
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+  height: 100vh;
+}
+
+.contact-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+.contact-form h1 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.contact-form button {
+  background-color: #c2b280;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.contact-form button:hover {
+  background-color: #a69d73;
+}
+
+.background-imageee {
+  background-image: url('https://media.istockphoto.com/id/1413428981/photo/modern-living-room-interior-3d-render.webp?a=1&b=1&s=612x612&w=0&k=20&c=ATXleq6F_v-wbj3R78qbfT3nI6cL-0UWT-tMbuR3wGk=');
+  /* Add your background image URL */
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .background-image {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+  }
+}
+
+
+/* contact us css */
+
+/* General Container */
+.contact-containerrrr {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+
+}
+
+/* Header Section */
+.contact-headerrrr {
+  text-align: center;
+  background-color: #e8f2f7;
+  padding: 40px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  /* background-image: url('https://media.istockphoto.com/id/1004108910/photo/woman-customer-service-agents-working-in-call-center.jpg?s=612x612&w=0&k=20&c=wEU1FC8xvzCDId0aK86zEi0CaFAw8Azct-X3rtpDh38=') ; */
+  background-image: cover;
+}
+
+.contact-headerrrr h1 {
+  font-size: 36px;
+  color: #1e2f50;
+}
+
+.contact-headerrrr p {
+  font-size: 16px;
+  color: #7a7a7a;
+  margin-top: 10px;
+}
+
+/* Main Content Section */
+
+
+/* Map Section */
+.contactttt-map {
+  flex: 1;
+  margin-right: 40px;
+}
+
+.contactttt-map img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Contact Details and Form Section */
+.contact-detailssss {
+  flex: 1.5;
+  width: 500px;
+}
+
+.get-in-touchhhh {
+  margin-bottom: 30px;
+}
+
+.get-in-touchhhh h2 {
+  font-size: 28px;
+  color: #1e2f50;
+}
+
+.get-in-touchhhh p {
+  font-size: 14px;
+  color: #7a7a7a;
+  margin-top: 10px;
+}
+
+.get-in-touchhhh ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.get-in-touchhhh ul li {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.get-in-touchhhh ul li i {
+  margin-right: 10px;
+  color: #1e2f50;
+}
+
+/* Contact Form */
+
+.contact-formmmm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-rowwww {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-rowwww input,
+.form-rowwww select,
+.form-rowwww textarea {
+  width: 48%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form-row textarea {
+  width: 100%;
+  resize: none;
+}
+
+.send-messageeee-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-messageeee-btn:hover {
+  background-color: #218838;
+}
+
+
+
+/* about uss css */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+
+  background-image: url('https://img.freepik.com/premium-photo/flat-vector-style-illustration-diverse-group-people-white-background_941097-145072.jpg');
+  height: auto;
+  width: a;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  color: white;
+}
+
+.about-text {
+  max-width: 50%;
+}
+
+.about-text h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.about-text p {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: black;
+
+}
+
+.learn-more-btn {
+  background-color: #4a90e2;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.learn-more-btn:hover {
+  background-color: #357ab9;
+}
+
+.about-illustration {
+  max-width: 50%;
+}
+
+.about-illustration img {
+  width: 650px;
+  height: 700px;
+
+}
