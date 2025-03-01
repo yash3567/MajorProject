@@ -9,7 +9,7 @@ import EditProfileModal from "./EditProfileModal";
 
 // import { POSTS } from "../../utils/db/dummy";
 {/* <span className='text-sm text-slate-500'>{POSTS?.length} posts</span> */ }
-
+import axioe from "axios"
 import { FaArrowLeft } from "react-icons/fa6";
 import { IoCalendarOutline } from "react-icons/io5";
 import { FaLink } from "react-icons/fa";
@@ -54,62 +54,6 @@ const ProfilePage = () => {
 		},
 	});
 
-	const [uploadedFiles, setUploadedFiles] = useState([]);
-    const [selectedFile, setSelectedFile] = useState(null);
-
-    const userId = authUser?._id; // Assume authUser is fetched from context or query
-
-    // Fetch Uploaded Files
-	useEffect(() => {
-		const fetchFiles = async () => {
-			if (!userId) return;
-			try {
-				const response = await fetch(`/api/files/${userId}`);
-				const data = await response.json();
-				setUploadedFiles(data);
-			} catch (error) {
-				console.error("Error fetching files:", error);
-			}
-		};
-		fetchFiles();
-	}, [userId]); 
-	
-
-    // Handle File Upload
-	const handleFileUpload = async (event) => {
-		if (!event.target.files || event.target.files.length === 0) {
-		  alert("No file selected.");
-		  return;
-		}
-	  
-		const file = event.target.files[0];
-	  
-		const formData = new FormData();
-		formData.append("file", file);
-	  
-		try {
-		  const response = await fetch("http://localhost:3000/api/files/upload", {
-			method: "POST",
-			body: formData,
-		  });
-	  
-		  const data = await response.json();
-		  
-		  if (!response.ok) {
-			throw new Error(data.message || "Upload failed");
-		  }
-	  
-		  alert("File uploaded successfully!");
-		  console.log("Uploaded File URL:", data.fileUrl);
-		} catch (error) {
-		  console.error("Upload failed:", error);
-		  alert("Upload failed. Please try again.");
-		}
-	  };
-	  
-	  
-	
-
 	const { isUpdatingProfile, updateProfile } = useUpdateUserProfile();
 
 	const isMyProfile = authUser._id === user?._id;
@@ -129,9 +73,37 @@ const ProfilePage = () => {
 	};
 
 
+
 	useEffect(() => {
 		refetch();
 	}, [username, refetch]);
+
+
+
+	const [file, setFile] = useState(null);
+	const [progress, setProgress] = useState({started: false, pc:0});
+	const [msg, setMsg] = useState(null);
+	function handleUpload() {
+		if (!file) {
+			setMsg("No file seleted")
+			return;
+		}
+		const fd = new FormData();
+		fd.append('file', file);
+setMsg("Uploading...");
+		axios.post('http://httpbin.org/post', fd, {
+			onUploadProgress: (progressEvent) => { console.log(progressEvent.progress*100) },
+			headers: {
+				"Custom-header": "value",
+			}
+		})
+		.then(res =>{
+			setMsg("Upload successfully")
+			 console.log(res.data)})
+		.catch(err => {
+			setMsg("Upload successfully")
+			console.log(err)})
+	}
 
 	return (
 		<>
@@ -156,7 +128,7 @@ const ProfilePage = () => {
 								<img
 									src={coverImg || user?.coverImg || "/cover.png"}
 									className='h-52 w-full object-cover'
-									alt='cover image'style={{height:"25rem"}}
+									alt='cover image' style={{ height: "25rem" }}
 								/>
 								{isMyProfile && (
 									<div
@@ -255,9 +227,9 @@ const ProfilePage = () => {
 												<div className='flex gap-4 items-center'>
 													{user.links[1] && (
 														<div className='flex gap-1 items-center'>
-															<FaGithub className='w-4 h-4 text-slate-500' /> {/* GitHub icon */}
+															 {/* GitHub icon */}
 															<a href={user.links[1]} target='_blank' rel='noreferrer' className='text-sm font-bold text-slate-700 hover:underline'>
-																GitHub
+																Source Code
 															</a>
 														</div>
 													)}
@@ -280,49 +252,10 @@ const ProfilePage = () => {
 									</div>
 								</div>
 
-								<div className="flex flex-col gap-4 mt-14 px-4">
-            {/* Upload File Section */}
-            {isMyProfile && (
-                <div className="border border-gray-700 rounded-lg p-4">
-                    <h3 className="text-lg font-bold mb-2">Upload Project Files</h3>
-
-                    {/* File Input */}
-                    <input
-                        type="file"
-                        accept=".pdf,.zip,.docx"
-                        className="file-input file-input-bordered w-full max-w-xs"
-                        onChange={(e) => setSelectedFile(e.target.files[0])}
-                    />
-
-                    <button
-                        className="btn btn-primary mt-2"
-                        onClick={handleFileUpload}
-                        disabled={!selectedFile}
-                    >
-                        Upload
-                    </button>
-
-                    {/* List of Uploaded Files */}
-                    <div className="mt-4">
-                        <h4 className="text-sm font-semibold">Uploaded Files:</h4>
-                        <ul className="list-disc pl-5 text-sm text-gray-300">
-                            {uploadedFiles.map((file) => (
-                                <li key={file._id}>
-                                    <a
-                                        href={file.fileUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-blue-400 hover:underline"
-                                    >
-                                        {file.fileName}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            )}
-        </div>
+								<div>
+									<input onChange={(e) => { setFile(e, target.files[0]) }} type="file" />
+									<button onClick={handleUpload}>Upload</button>
+								</div>
 
 
 								<div className='flex gap-2'>
